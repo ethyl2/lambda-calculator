@@ -1,7 +1,8 @@
 import React from "react";
 
-const Display = () => {
-  return <div className="display">{/* Display any props data here */}0</div>;
+const Display = (props) => {
+  const { total } = props;
+  return <div className="display">{/* Display any props data here */total}</div>;
 };
 
 export default Display;
