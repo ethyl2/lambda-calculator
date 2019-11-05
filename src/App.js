@@ -29,6 +29,8 @@ function App() {
         import/export all files */}
         <Specials />
         <Numbers />
+        <Operators />
+        
       </div>
     </div>
   );
