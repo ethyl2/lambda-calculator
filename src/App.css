@@ -37,6 +37,13 @@
 
   .specialsContainer {
       padding: 1rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .operatorsContainer {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   }
 
   .button {
@@ -57,4 +64,8 @@
 
   .specialButton {
       background: #1F60AF;
+  }
+
+  .operatorButton {
+      background: #3DB5E5;
   }
