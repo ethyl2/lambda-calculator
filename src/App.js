@@ -13,6 +13,7 @@ import Specials from "./components/ButtonComponents/SpecialButtons/Specials";
 function App() {
 
   const [totalState, setTotalState] = useState(0);
+  const [oldTotalState, setOldTotalState] = useState(0);
 
   const numButtonHandler = num => {
     //TODO: Add functionality of whether this number is the total or the new num entered
@@ -35,6 +36,15 @@ function App() {
     }
   }
 
+  const operatorButtonHandler = () => {
+    console.log("-----------");
+    console.log("totalState: ", totalState);
+    setOldTotalState(totalState);
+    setTotalState(0);
+    console.log("oldTotalState: ", oldTotalState);
+    console.log("current totalState: ", totalState);
+  }
+
   // STEP 5 - After you get the components displaying using the provided data file, write your state hooks here.
   // Once the state hooks are in place write some functions to hold data in state and update that data depending on what it needs to be doing
   // Your functions should accept a parameter of the the item data being displayed to the DOM (ie - should recieve 5 if the user clicks on
@@ -50,7 +60,7 @@ function App() {
         import/export all files */}
         <Specials specialButtonHandler={specialButtonHandler}/>
         <Numbers numButtonHandler={numButtonHandler}/>
-        <Operators />
+        <Operators operatorButtonHandler={operatorButtonHandler}/>
         
       </div>
     </div>
