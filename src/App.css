@@ -14,6 +14,11 @@
     align-items: center;
     padding: 1rem;
 }
+
+.logo-container {
+    width: 90%;
+}
+
 .display {
     margin-top: 25px;
     height: 100px;
