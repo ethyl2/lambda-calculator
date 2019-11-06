@@ -21,6 +21,14 @@ function App() {
     setTotalState(currentTotalState => parseFloat(currentTotalState.toString() + num.number));
   }
 
+  const clearDisplay = char => {
+    //console.log("char: ", char);
+    if (char.special === "C") {
+      //console.log("Time to clear");
+      setTotalState(0);
+    }
+  }
+
   // STEP 5 - After you get the components displaying using the provided data file, write your state hooks here.
   // Once the state hooks are in place write some functions to hold data in state and update that data depending on what it needs to be doing
   // Your functions should accept a parameter of the the item data being displayed to the DOM (ie - should recieve 5 if the user clicks on
@@ -34,7 +42,7 @@ function App() {
       <div className="App">
         {/* STEP 4 - Render your components here and be sure to properly 
         import/export all files */}
-        <Specials />
+        <Specials clearDisplay={clearDisplay}/>
         <Numbers numButtonHandler={numButtonHandler}/>
         <Operators />
         
