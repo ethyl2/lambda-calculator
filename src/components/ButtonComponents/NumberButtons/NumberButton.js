@@ -2,10 +2,10 @@ import React from "react";
 
 const NumberButton = (props) => {
   //console.log(props);
-  const { number, trialButtonHandler } = props;
+  const { number, numButtonHandler } = props;
   return (
     <button className="button numberButton" onClick={() => {
-      trialButtonHandler({number});
+      numButtonHandler({number});
     }}
     >{number}</button>
   );

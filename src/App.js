@@ -14,12 +14,11 @@ function App() {
 
   const [totalState, setTotalState] = useState(0);
 
-  const trialButtonHandler = num => {
-    //TODO: Add to components.
-    //setTotalState(num);
-    console.log("Clicked");
-    console.log(num.number);
-    setTotalState(currentTotalState => currentTotalState.toString() + num.number);
+  const numButtonHandler = num => {
+    //TODO: Add functionality of whether this number is the total or the new num entered
+    //console.log("Clicked");
+    //console.log(num.number);
+    setTotalState(currentTotalState => parseFloat(currentTotalState.toString() + num.number));
   }
 
   // STEP 5 - After you get the components displaying using the provided data file, write your state hooks here.
@@ -36,7 +35,7 @@ function App() {
         {/* STEP 4 - Render your components here and be sure to properly 
         import/export all files */}
         <Specials />
-        <Numbers trialButtonHandler={trialButtonHandler}/>
+        <Numbers numButtonHandler={numButtonHandler}/>
         <Operators />
         
       </div>
