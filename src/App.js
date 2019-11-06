@@ -27,6 +27,12 @@ function App() {
       //console.log("Time to clear");
       setTotalState(0);
     }
+    else if (char.special === "%") {
+      setTotalState(currentTotalState => currentTotalState * 0.01);
+    }
+    else if (char.special === "+/-") {
+      setTotalState(currentTotalState => currentTotalState - (2 * currentTotalState));
+    }
   }
 
   // STEP 5 - After you get the components displaying using the provided data file, write your state hooks here.
