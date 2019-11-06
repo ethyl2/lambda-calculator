@@ -1,11 +1,13 @@
 import React from "react";
 
 const NumberButton = (props) => {
-  const { number } = props;
+  //console.log(props);
+  const { number, trialButtonHandler } = props;
   return (
     <button className="button numberButton" onClick={() => {
-      console.log(number);
-    }}>{number}</button>
+      trialButtonHandler({number});
+    }}
+    >{number}</button>
   );
 };
 

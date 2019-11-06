@@ -16,7 +16,10 @@ function App() {
 
   const trialButtonHandler = num => {
     //TODO: Add to components.
-    setTotalState(num);
+    //setTotalState(num);
+    console.log("Clicked");
+    console.log(num.number);
+    setTotalState(currentTotalState => currentTotalState.toString() + num.number);
   }
 
   // STEP 5 - After you get the components displaying using the provided data file, write your state hooks here.
@@ -33,7 +36,7 @@ function App() {
         {/* STEP 4 - Render your components here and be sure to properly 
         import/export all files */}
         <Specials />
-        <Numbers />
+        <Numbers trialButtonHandler={trialButtonHandler}/>
         <Operators />
         
       </div>
