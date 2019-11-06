@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=B612+Mono&display=swap');
+
 .container {
     background-color: #c00025;
     width: 100%;
@@ -5,7 +7,18 @@
     border-radius: 15px;
     border: 2px solid grey;
     padding-bottom: 25px;
+    display: flex;
+    flex-flow: column nowrap;
+    
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
 }
+
+.logo-container {
+    width: 90%;
+}
+
 .display {
     margin-top: 25px;
     height: 100px;
@@ -19,4 +32,58 @@
     align-items: flex-end;
     padding-right: 8%;
     font-size: 5.0rem;
+  }
+  
+  .App {
+      display: grid;
+      grid-template: repeat(5, 1fr) / repeat(4, 1fr);
+  }
+  .numbersContainer {
+      grid-column: 1 / 4;
+      grid-row: 2 / 6;
+  }
+
+  .specialsContainer {
+      grid-column: 1 / 4;
+      grid-row: 1 / 2;
+      display: flex;
+  }
+
+  .operatorsContainer {
+      grid-column: 4 / 5;
+      grid-row: 1 / 6;
+  }
+
+  .button {
+      border-radius: 50%;
+      font-size: 3rem;
+      padding: 1.5rem 1.75rem;
+      background-color: #113C78;
+      color: white;
+      font-family: 'B612 Mono', monospace;
+      border: none;
+      box-shadow: 0 4px #420108;
+      margin: 1rem;
+  }
+
+  .button:hover {
+      color: black;
+  }
+
+  .button:active {
+      transform: translateY(10px);
+  }
+
+  .numberButton {
+      background: #113C78;
+      margin-right: 1.5rem;
+      padding: 1.5rem 2rem;
+  }
+
+  .specialButton {
+      background: #1F60AF;
+  }
+
+  .operatorButton {
+      background: #3DB5E5;
   }
