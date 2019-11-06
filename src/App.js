@@ -21,7 +21,7 @@ function App() {
     setTotalState(currentTotalState => parseFloat(currentTotalState.toString() + num.number));
   }
 
-  const clearDisplay = char => {
+  const specialButtonHandler = char => {
     //console.log("char: ", char);
     if (char.special === "C") {
       //console.log("Time to clear");
@@ -48,7 +48,7 @@ function App() {
       <div className="App">
         {/* STEP 4 - Render your components here and be sure to properly 
         import/export all files */}
-        <Specials clearDisplay={clearDisplay}/>
+        <Specials specialButtonHandler={specialButtonHandler}/>
         <Numbers numButtonHandler={numButtonHandler}/>
         <Operators />
         

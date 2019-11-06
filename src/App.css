@@ -76,7 +76,8 @@
 
   .numberButton {
       background: #113C78;
-      margin-right: 2.05rem;
+      margin-right: 1.5rem;
+      padding: 1.5rem 2rem;
   }
 
   .specialButton {
